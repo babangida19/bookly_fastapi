@@ -19,3 +19,7 @@ class UserModel(BaseModel):
     email:str
     is_verified:bool
     created_at:datetime
+
+class UserLoginModel(BaseModel):
+    email:str =Field(max_length=100)
+    password:str =Field(min_length=6)        
